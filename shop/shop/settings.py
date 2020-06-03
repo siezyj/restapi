@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Overwrite default user model to add support for email
+AUTH_USER_MODEL = "core.User"
 
 # Application definition
 
@@ -37,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'core',
+    'apps.products'
 ]
 
 MIDDLEWARE = [
