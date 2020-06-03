@@ -25,7 +25,7 @@ SECRET_KEY = "coant%7ow_3vf60^29_e+ed%lbtz91*xh%qo2s4#qx#1z1y53o"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["0.0.0.0"]
 
 # Overwrite default user model to add support for email
 AUTH_USER_MODEL = "core.User"
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "rest_framework",
     "core",
     "apps.products",
 ]
@@ -53,7 +54,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "shop.urls"
+ROOT_URLCONF = "urls.main"
 
 TEMPLATES = [
     {

@@ -24,6 +24,7 @@ class OrderDetail(models.Model):
         blank=False,
         related_name="order_details",
     )
+
     order = models.ForeignKey(
         "Order",
         on_delete=models.CASCADE,
@@ -31,4 +32,5 @@ class OrderDetail(models.Model):
         blank=False,
         related_name="order_details",
     )
+    
     quantity = models.BigIntegerField(default=1)
